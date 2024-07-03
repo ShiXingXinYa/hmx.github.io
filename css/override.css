@@ -1,0 +1,83 @@
+.block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+/* 当设备宽度小于750px时，修改样式 */
+@media only screen and (max-width: 750px) {
+    .block-list {
+        width: 100% !important;
+    }
+}
+
+.block-list {
+    width: 40%;
+    background-color: #1296DB;
+    color: #ffffff;
+    animation: roundCorner 0.5s forwards;
+    margin: 20px 0 10px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* 定义动画效果 */
+}
+
+.block-list-w {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 10px 0;
+    background-color: #1296DB;
+    color: #ffffff;
+    animation: roundCorner 0.5s forwards;
+    padding: 20px;
+}
+
+.intro-title {
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.intro {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+
+.block-list-w:hover {
+    background-color: #FFD700;
+    animation: none;
+    /* 悬停时停止动画 */
+    border-radius: 20px;
+    /* 鼠标悬停时变为圆角 */
+}
+
+
+.block-list:hover {
+    background-color: #FFD700;
+    animation: none;
+    /* 悬停时停止动画 */
+    border-radius: 20px;
+    /* 鼠标悬停时变为圆角 */
+}
+
+@keyframes roundCorner {
+    from {
+        border-radius: 20px;
+    }
+
+    to {
+        border-radius: 0;
+    }
+}
+
+/* Clearfix to ensure proper alignment */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
